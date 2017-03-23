@@ -1,0 +1,65 @@
+section {
+	padding: 20px;
+	background-color: #9E9E9E;
+}
+
+#mission, #disclaimer, #about, #rating {
+	margin: 10px 0px;
+}
+
+#mission, #disclaimer {
+	text-align: right;
+}
+
+h3 {
+	margin-top: 50px;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+
+#headshot {
+	display: block;
+	height: 300px;
+	margin: auto;
+	filter: grayscale(100%);
+	border-radius: 150px;
+	transition: all 0.7s ease-in-out;
+}
+
+#headshot:hover {
+	transform: rotateY(180deg);
+}
+
+.lock {
+	width: 16%;
+	height: auto;
+	margin: 100px 7px;
+	transform: translateY(100%);
+	opacity: 0;
+}
+
+.lock-1 {
+	transition: all 0.3s ease-in-out;
+}
+
+.lock-2 {
+	transition: all 0.3s ease-in-out 0.3s;
+}
+
+.lock-3 {
+	transition: all 0.3s ease-in-out 0.5s;
+}
+
+.lock-4 {
+	transition: all 0.3s ease-in-out 0.7s;
+}
+
+.lock-5 {
+	transition: all 0.3s ease-in-out 0.9s;
+}
+
+.rated {
+	opacity: 1;
+	transform: translateY(0);
+}
+
