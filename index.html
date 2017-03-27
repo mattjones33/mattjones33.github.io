@@ -7,67 +7,121 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon" />
 
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/style.css">
+        
     </head>
-    <body class="container">
-        <header>
+    <body>
+
+<!-- NAV BAR -->
+        <nav>
+            <a href="map_view.html">Map View</a>
+            <a href="list_view.html">List View</a>
+            <a href="gallery.html">Photo Gallery</a>
+            <a href="success.html">Success Rate</a>
+            <a href="suggestions.html" id="space-here">Suggestions?</a>
+        </nav>
+
+<!-- HEADER -->
+        <a href="#"><button id="keyhole"></button></a>
+        <header class="fullscreen" id="matt">
+            <div class="curl"></div>
             <div id="page-title">
-                <div id="yellow-trapezoid"></div>
-                <h1>The Art of Escape</h1>
-                <a href="#" id="keyhole"><button></button></a>
-                <div id="button-hide"></div>
+                <h1>The <span id="art">Art</span> of Escape</h1>
             </div>
-<!-- I want to make the nav responsive...but I'm having a lot of trouble :( -->
-            <nav>  
-                <div id="andrew"><a href="map_view.html" class="navigation">Map View</a></div>
-                <div id="matt"><a href="list_view.html" class="navigation">List View</a></div>
-                <div id="stacie"><a href="success.html" class="navigation">Success Rate</a></div>
-                <div id="parul"><a href="gallery.html" class="navigation">Photo Gallery</a></div>
-                <div id="alvin"><a href="suggestions.html" class ="navigation">Suggestions?</a></div>
-            </nav>
+            <div class="down-arrow-wrapper arrow-wrapper">
+                <a href="#andrew"><i class="fa fa-arrow-down scroll down" aria-hidden="true"></i></a>
+            </div>
         </header>
-        <section class="row" id="about">
-            <div class ="col-sm-12 col-md-7">
-                <h3>About Me</h3>
+
+<!-- ABOUT SECION -->
+        <section class="fullscreen" id="andrew">
+            <div class="up-arrow-wrapper arrow-wrapper">
+                <a href="#matt"><i class="fa fa-arrow-up scroll up" aria-hidden="true"></i></a>
+            </div>
+            <h3 id="about-title">About Me</h3>
+            <div class="about pop-out">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <div class="col-sm-12 col-md-5">
+            <div class="headshot-wrapper">
                 <img src="images/icons/headshot.svg" id="headshot">
             </div>
+            <div class="down-arrow-wrapper arrow-wrapper">
+                <a href="#stacie"><i class="fa fa-arrow-down scroll down" aria-hidden="true"></i></a>
+            </div>  
         </section>
-        <section class="row" id="mission">
-            <div class="hidden-sm col-md-5">
+
+<!-- MISSION SECTION -->
+        <section class="fullscreen" id="stacie">
+            <div class="up-arrow-wrapper arrow-wrapper">
+                <a href="#andrew"><i class="fa fa-arrow-up scroll up" aria-hidden="true"></i></a>
             </div>
-            <div class ="col-sm-12 col-md-7">
-                <h3>Mission</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>            
-        </section>
-        <section class="row" id="rating">
-            <div class ="col-sm-12 col-md-7">
-                <h3>Rating System</h3>
+            <div id="range">
+                <img src="images/icons/aim.svg" id="target">
+            </div>
+            <h3 id="mission-title">Mission</h3>
+            <div class="mission pop-out">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <div class="col-sm-12 col-md-5">
-                <img src="images/icons/lock.svg" class="lock lock-1">
-                <img src="images/icons/lock.svg" class="lock lock-2">
-                <img src="images/icons/lock.svg" class="lock lock-3">
-                <img src="images/icons/lock.svg" class="lock lock-4">
-                <img src="images/icons/lock.svg" class="lock lock-5">
+            <div class="down-arrow-wrapper arrow-wrapper">
+                <a href="#parul"><i class="fa fa-arrow-down scroll down" aria-hidden="true"></i></a>
             </div>
         </section>
-        <section class="row" id="disclaimer">
-            <div class="hidden-sm col-md-5">
+
+<!-- RATING SECTION -->
+        <section class="fullscreen" id="parul">
+            <div class="up-arrow-wrapper arrow-wrapper">
+                <a href="#stacie"><i class="fa fa-arrow-up scroll up" aria-hidden="true"></i></a>
             </div>
-            <div class ="col-sm-12 col-md-7">
-                <h3>**Disclaimer**</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>            
+            <h3 id="rating-title">Rating System</h3>
+            <div class="rating pop-out">
+                <p>The 5 KEY points for a successful escape room</p>
+                <ol>
+                    <li><strong>Innovation</strong>: Has this been done before? Did the room make me think creatively to solve a problem? Was one type of puzzle overrepresented?</li>
+                    <li><strong>Production Value</strong>: Does it look nice? Was I immersed in the room? Did everything work like it was supposed to?</li>
+                    <li><strong>Difficulty</strong>: Were the puzzles too simple? Were the puzzles too hard/tedious? Were the directions clear, or did I spend too long wondering what I was supposed to do?</li>
+                    <li><strong>Teamwork</strong>: Could I have done this myself? (Did I do it myself)? Does this room force me to rely on my teammates? And is that more frustrating than it's worth?<</li>
+                    <li><strong>Overall Experience</strong>: Did I continue to think about the experience at it was over? How was the staff involvement? Did the room's pacing keep me excited throughout?</li>
+                </ol>
+            </div>
+            <div id="lock-block">
+                <div class="row">
+                    <img src="images/icons/lock.svg" class="lock lock-1">
+                    <img src="images/icons/lock.svg" class="lock lock-2">
+                    <img src="images/icons/lock.svg" class="lock lock-3">
+                </div>
+                <div class="row">
+                    <img src="images/icons/lock.svg" class="lock lock-4">
+                    <img src="images/icons/lock.svg" class="lock lock-5">
+                </div>
+            </div>
+            <div class="down-arrow-wrapper arrow-wrapper">
+                <a href="#alvin"><i class="fa fa-arrow-down scroll down" aria-hidden="true"></i></a>
+            </div>
+        </section>
+
+<!-- DISCLAIMER SECTION -->
+        <section class="fullscreen" id="alvin">
+            <div class="up-arrow-wrapper arrow-wrapper">
+                <a href="#parul"><i class="fa fa-arrow-up scroll up" aria-hidden="true"></i></a>
+            </div>
+            <div id="alert-box">
+                <img src="images/icons/alert.png" id="alert">
+            </div>
+            <h3 id="disclaimer-title">**Disclaimer**</h3>
+            <div class="disclaimer pop-out">
+                <p id="bias">I am biased.</p> 
+                <p>As a former employee of an escape room company, many of my opinions are, in part, due to experiences I've had while working there. Regardless, <em>the views and opinions expressed on this website are my own and do not necessarily reflect the official policy or position of any escape room.</em></p>
+                <p>Fret not! I approach each review as unbiased as possible.</p>
+            </div>
+            <div class="down-arrow-wrapper arrow-wrapper">
+                <i class="fa fa-arrow-down scroll down" aria-hidden="true"></i> 
+            </div>  
         </section>
 
         <script src="js/jquery-1.12.0.min.js"></script>

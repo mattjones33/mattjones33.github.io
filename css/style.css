@@ -1,14 +1,49 @@
+
+
 body {
-	width: 1300px;
 	margin: 0 auto;
 	background-color: black;
 }
 
+.fullscreen {
+	height: 800px;
+	position: relative;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*NAVIGATION BAR*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+nav {
+	display: flex;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 100;
+	background-color: #FFFFFF;
+	opacity: 0.75;
+}
+
+nav a {
+	display: block;
+	margin-left: 9%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: black;
+}
+
+#space-here {
+	margin-right: 23%;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*HEADER*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 header {
 	position: relative;
 	width: 100%;
-	height: 800px;
-	background-image: url(../padlock.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -16,143 +51,95 @@ header {
 	filter: grayscale(100%);
 }
 
+#art {
+	color: red;
+	z-index: 21;
+}
+
 #page-title {
 	overflow: hidden;
-	background-color: #9E9E9E;
 }
 
-#yellow-trapezoid {
+/*.curl {
+	width:120px;
+	height:120px;
 	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	transform: skewY(-15deg);
-  	transform-origin: top left;
-  	background-color: #40413E;
-  	width: 100%;
-  	height: 60%;
-  	margin-top: -20px;
-  	border-bottom: 10px solid black;
-  	z-index: 1;
+	top:0;
+	left:0;
+	background : 
+		linear-gradient(
+			135deg, 
+			#fff, 
+			#f3f3f3 45%, 
+			#ddd 50%, 
+			#aaa 50%, 
+			#bbb 56%, 
+			#ccc 62%, 
+			#f3f3f3 80%,
+			#fff 100%
+		);
+	box-shadow : 0 0 10px rgba(0, 0, 0, .5);
+	transition: all .5s ease;
 }
-
-button {
+.curl:before,
+.curl:after {
+	content: '';
 	position: absolute;
-	top: 15px;
-	right: 950px;
 	z-index: 2;
+	left: 12.5%;
+	bottom: 5.8%;
+	width: 70%;
+	max-width: 300px;
+	max-height: 100px;
+	height: 55%;
+	box-shadow: 0 12px 15px rgba(0, 0, 0, .3);
+	transform: skew(-10deg) rotate(-6deg);
+}
+.curl:after {
+	left: auto;
+	right: 5.8%;
+	bottom: auto;
+	top: 14.16%;
+	transform: skew(-15deg) rotate(-84deg);
+}
+
+.curl:hover {
+	width: 240px;
+	height: 240px;
+}
+.curl:hover:before,
+.curl:hover:after {
+	box-shadow: 0 24px 30px rgba(0, 0, 0, .3);
+}*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*HOME BUTTON*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#keyhole {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 1;
 	height: 25%;
 	width: 15%;
 	border: none;
 	outline: none;
-	background-image: url(../keyhole.jpg);
+	background-image: url(../images/icons/keyhole.jpg);
 	background-size: 70%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: white;
 }
 
-#button-hide {
-	position: absolute;
-	pointer-events: none;
-	top: 15px;
-	right: 950px;
-	z-index: 3;
-	height: 25%;
-	width: 15%;
-	background-color: #40413E;
-	transition: all 0.3s ease-in-out;
-}
 
-.moved {
-	transform: translateY(-98%);
-}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*FOOTER*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#andrew {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	width: 15%;
-	height: 800px;
-	background-color: #40413E;
-	right: 15px;
-	top: -590px;
-	border-radius: 5px;
-	transition: top 0.3s ease;
-}
-
-#andrew:hover {
-	top: -475px;
-}
-
-#matt {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	width: 15%;
-	height: 800px;
-	background-color: #40413E;
-	right: 202px;
-	top: -540px;
-	border-radius: 5px;
-	transition: top 0.3s ease;
-}
-
-#matt:hover {
-	top: -425px;
-}
-
-#stacie {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	width: 15%;
-	height: 800px;
-	background-color: #40413E;
-	right: 389px;
-	top: -490px;
-	border-radius: 5px;
-	transition: top 0.3s ease;
-}
-
-#stacie:hover {
-	top: -375px;
-}
-
-#parul {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	width: 15%;
-	height: 800px;
-	background-color: #40413E;
-	right: 576px;
-	top: -440px;
-	border-radius: 5px;
-	transition: top 0.3s ease;
-}
-
-#parul:hover {
-	top: -325px;
-}
-
-#alvin {
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	width: 15%;
-	height: 800px;
-	background-color: #40413E;
-	right: 763px;
-	top: -390px;
-	border-radius: 5px;
-	transition: top 0.3s ease;
-}
-
-#alvin:hover {
-	top: -275px;
-}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*FONT STYLES*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 h1, h2 {
 	position: relative;
@@ -162,16 +149,19 @@ h1, h2 {
 	text-transform: uppercase;
 }
 
-.navigation {
-	position: absolute;
-	bottom: 70px;
-	text-decoration: none;
-	color: black;
-	font-weight: bold;
+h1 {
+	font-size: 60px;
+	width: 340px;
+	margin: auto;
+	margin-top: 70px;
 }
 
-.navigation:hover {
-	color: white;
-	text-decoration: none;
-}
+
+
+
+
+
+
+
+
 
