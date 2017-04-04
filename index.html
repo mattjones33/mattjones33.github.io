@@ -9,6 +9,9 @@
 
         <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon" />
 
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Kalam" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cantarell:400,400i,700" rel="stylesheet">
+
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,41 +23,60 @@
 
 <!-- NAV BAR -->
         <nav>
-            <a href="map_view.html">Map View</a>
-            <a href="list_view.html">List View</a>
-            <a href="gallery.html">Photo Gallery</a>
-            <a href="success.html">Success Rate</a>
-            <a href="suggestions.html" id="space-here">Suggestions?</a>
+            <div class="hidden-nav">
+                <a href="map_view.html">Map View</a>
+                <a href="list_view.html">List View</a>
+                <a href="gallery.html">Photo Gallery</a>
+                <a href="success.html">Success Rate</a>
+                <a href="suggestions.html">Suggestions?</a>
+            </div>
+            <a href="#" id="home-button">
+                <img src="images/icons/keyhole-shape.svg" alt="" id="keyhole">
+            </a>
+            
         </nav>
 
 <!-- HEADER -->
-        <a href="#"><button id="keyhole"></button></a>
+        <!-- <a href="#"><button id="keyhole"></button></a> -->
+        <div id="page-title">
+            <h1>The <span id="art">Art</span> of Escape</h1>
+        </div>
+        
+<!--         <img src="images/icons/keyhole-shape.svg" alt="" id="keyhole"> -->
+
+
         <header class="fullscreen" id="matt">
-            <div class="curl"></div>
-            <div id="page-title">
-                <h1>The <span id="art">Art</span> of Escape</h1>
-            </div>
             <div class="down-arrow-wrapper arrow-wrapper">
                 <a href="#andrew"><i class="fa fa-arrow-down scroll down" aria-hidden="true"></i></a>
             </div>
         </header>
 
+        <button class="arrow-wrapper top-button">
+            <a href="#matt">
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                <p>Back to top</p>
+            </a>
+        </button>  
+
 <!-- ABOUT SECION -->
         <section class="fullscreen" id="andrew">
-            <div class="up-arrow-wrapper arrow-wrapper">
+            <div class="up-arrow-wrapper arrow-wrapper scroll-about">
                 <a href="#matt"><i class="fa fa-arrow-up scroll up" aria-hidden="true"></i></a>
             </div>
             <h3 id="about-title">About Me</h3>
             <div class="about pop-out">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
-            <div class="headshot-wrapper">
-                <img src="images/icons/headshot.svg" id="headshot">
+            <img src="images/icons/key.svg" id="key">
+            <div class="headshot-wrapper stage-one">
+                <img src="images/icons/headshot.jpg" id="headshot">
             </div>
-            <div class="down-arrow-wrapper arrow-wrapper">
+            <div class="down-arrow-wrapper arrow-wrapper scroll-about">
                 <a href="#stacie"><i class="fa fa-arrow-down scroll down" aria-hidden="true"></i></a>
-            </div>  
+            </div>
         </section>
+
+        <hr>
 
 <!-- MISSION SECTION -->
         <section class="fullscreen" id="stacie">
@@ -73,6 +95,8 @@
             </div>
         </section>
 
+        <hr>
+
 <!-- RATING SECTION -->
         <section class="fullscreen" id="parul">
             <div class="up-arrow-wrapper arrow-wrapper">
@@ -82,11 +106,11 @@
             <div class="rating pop-out">
                 <p>The 5 KEY points for a successful escape room</p>
                 <ol>
-                    <li><strong>Innovation</strong>: Has this been done before? Did the room make me think creatively to solve a problem? Was one type of puzzle overrepresented?</li>
-                    <li><strong>Production Value</strong>: Does it look nice? Was I immersed in the room? Did everything work like it was supposed to?</li>
-                    <li><strong>Difficulty</strong>: Were the puzzles too simple? Were the puzzles too hard/tedious? Were the directions clear, or did I spend too long wondering what I was supposed to do?</li>
-                    <li><strong>Teamwork</strong>: Could I have done this myself? (Did I do it myself)? Does this room force me to rely on my teammates? And is that more frustrating than it's worth?<</li>
-                    <li><strong>Overall Experience</strong>: Did I continue to think about the experience at it was over? How was the staff involvement? Did the room's pacing keep me excited throughout?</li>
+                    <li class="key-points"><strong>Innovation</strong>: Has this been done before? Did the room make me think creatively to solve a problem? Was one type of puzzle overrepresented?</li>
+                    <li class="key-points"><strong>Production Value</strong>: Does it look nice? Was I immersed in the room? Did everything work like it was supposed to?</li>
+                    <li class="key-points"><strong>Difficulty</strong>: Were the puzzles too simple? Were the puzzles too hard/tedious? Were the directions clear, or did I spend too long wondering what I was supposed to do?</li>
+                    <li class="key-points"><strong>Teamwork</strong>: Could I have done this myself? (Did I do it myself)? Does this room force me to rely on my teammates? And is that more frustrating than it's worth?<</li>
+                    <li class="key-points"><strong>Overall Experience</strong>: Did I continue to think about the experience at it was over? How was the staff involvement? Did the room's pacing keep me excited throughout?</li>
                 </ol>
             </div>
             <div id="lock-block">
@@ -105,6 +129,8 @@
             </div>
         </section>
 
+        <hr>
+
 <!-- DISCLAIMER SECTION -->
         <section class="fullscreen" id="alvin">
             <div class="up-arrow-wrapper arrow-wrapper">
@@ -120,9 +146,19 @@
                 <p>Fret not! I approach each review as unbiased as possible.</p>
             </div>
             <div class="down-arrow-wrapper arrow-wrapper">
-                <i class="fa fa-arrow-down scroll down" aria-hidden="true"></i> 
-            </div>  
+                <a href="#jenni"><i class="fa fa-arrow-down scroll down" aria-hidden="true"></i></a>
+            </div> 
         </section>
+
+        <hr>
+
+<!-- FOOTER -->
+        <footer id="jenni">
+            <div class="up-arrow-wrapper arrow-wrapper">
+                <a href="#alvin"><i class="fa fa-arrow-up scroll up" aria-hidden="true"></i></a>
+            </div>
+            <p>This is the footer section! What should I put here?</p>
+        </footer>
 
         <script src="js/jquery-1.12.0.min.js"></script>
         <script src="js/main.js"></script>
