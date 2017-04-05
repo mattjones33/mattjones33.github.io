@@ -2,32 +2,50 @@
 
 
 var coinLift = "no";
-// var keyFound = "no";
+var keyFound = "no";
+var findColor = "red";
+
+var kkeys = [];
+var konami = "71,82,69,69,78,13";
 
 $('.top-button').hide();
+$('.modal-background').hide();
 
 
 // When the user finds the key
 $('#key').on('click', function () {
-    // Type code related to event here! :)
     $('#key').fadeOut();
-    // keyFound = "yes";
-    sessionStorage.setItem('keyFound', "yes");
+    keyFound = "yes";
+    // sessionStorage.setItem('keyFound', "yes");
+});
+
+// When the user finds the fake keys
+$('.fake-key').on('click', function () {
+    $('.fake-key').fadeOut();
+    keyFound = "yes";
+    
 });
 
 
 // When the user clicks on the keyhole
 $('#keyhole').on('click', function (event) {
     event.preventDefault();
-    keyFound = sessionStorage.getItem('keyFound') || "no";
+    // keyFound = sessionStorage.getItem('keyFound') || "no";
+
     if (keyFound === "yes") {
         $('.hidden-nav').toggleClass('hi-nav');
     } else {
         // Show modal window
+        $('.modal-background').fadeIn();
     }
-    
+});
+
+// When the user clicks on the #close button in the modal window
+$('#close').on('click', function () {
+    $('.modal-background').fadeOut();
     
 });
+
 
 // When the user scrolls down,
 $(window).on('scroll', function () {
@@ -57,9 +75,12 @@ $(window).on('scroll', function () {
             $('.headshot-wrapper').removeClass('stage-one');
             $('.headshot-wrapper').addClass('stage-two');
         }, 4000);
-        setTimeout(function() {
-            $('#key').fadeIn();
-        }, 3200);
+        if (keyFound === "no") {
+            setTimeout(function() {
+                $('#key').fadeIn();
+                }, 3200);
+        } else {  
+        }
     } else {
         $('.headshot-wrapper').removeClass('stage-two');
         $('.headshot-wrapper').addClass('stage-one');
@@ -144,8 +165,100 @@ $('.arrow-wrapper a').on('click', function(e) {
 	
 
 
+// When the user clicks on the red item
+$('#alert').on('click', function () {
+    if (findColor === "red") {
+        $('#alert').attr('src', 'images/icons/alert-red.svg');
+        $('#art').removeClass('red');
+        $('#art').addClass('orange');
+        $('#home').css('background-color', 'red');
+    } else {
+    }
 
+    findColor = "orange";    
+});
 
+// When the user clicks on the orange item
+$('#orange-word').on('click', function () {
+    if (findColor === "orange") {
+        $('#orange-word').addClass('orange');
+        $('#art').removeClass('orange');
+        $('#art').addClass('yellow');
+        $('#map-view').css('background-color', 'orange');
+    } else {
+    }
+
+    findColor = "yellow";  
+});
+
+// When the user clicks on the yellow item
+$('#target').on('click', function () {
+    if (findColor === "yellow") {
+        $('#target').attr('src', 'images/icons/aim-yellow.svg');
+        $('#art').removeClass('yellow');
+        $('#art').addClass('green');
+        $('#list-view').css('background-color', 'yellow');
+    } else {
+    }
+
+    findColor = "blue"; 
+});
+
+// When the user clicks on the green item
+$(document).keydown(function(e) {
+  kkeys.push( e.keyCode );
+  if (kkeys.toString().indexOf(konami) >= 0 && findColor === "green") {
+    $(document).unbind('keydown',arguments.callee);
+    
+    $('.green-word').css('color', 'green');
+    $('#art').removeClass('green');
+    $('#art').addClass('blue');
+    $('#gallery').css('background-color', 'green');
+    } else {
+
+    }
+
+    findColor = "blue";
+});
+
+// When the user clicks on the blue item
+$('.lock-3').on('click', function () {
+    if (findColor === "blue") {
+        $('.lock-3').attr('src', 'images/icons/lock-blue.svg');
+        $('#art').removeClass('blue');
+        $('#art').addClass('indigo');
+        $('#success').css('background-color', 'blue');
+    } else {
+    }
+
+    findColor = "indigo"; 
+});
+
+// When the user clicks on the indigo item
+$('#indigo-word').on('click', function () {
+    if (findColor === "indigo") {
+        $('#indigo-word').addClass('indigo');
+        $('#art').removeClass('indigo');
+        $('#art').addClass('violet');
+        $('#suggestions').css('background-color', 'indigo');
+    } else {
+    }
+
+    findColor = "violet";  
+});
+
+// When the user clicks on the violet item
+$('#art').on('click', function () {
+    if (findColor === "violet") {
+        $('#art').removeClass('indigo');
+        $('#art').addClass('white');
+        $('#home-button').css('background-color', 'violet');
+    } else {
+    }
+
+    findColor = "done";  
+});
+   
 
 
 

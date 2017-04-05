@@ -12,7 +12,7 @@ body {
 }
 
 .fullscreen {
-	height: 800px;
+	min-height: 800px;
 	position: relative;
 	overflow: hidden;
 }
@@ -44,7 +44,7 @@ nav {
 	display: inline-block;
 	height: 100%;
 	line-height: 50px;
-	width: 19.7%;
+	width: 16.4%;
 	text-align: center;
 	border-right: 1px solid black;
 	color: black;
@@ -54,7 +54,7 @@ nav {
 	border-right: none;
 	height: 50px;
 	line-height: 50px;
-	width: 16%;
+	width: 14.6%;
 	margin: 0 auto;
 	text-align: center;
 	background-color: #FFFFFF;
@@ -64,8 +64,12 @@ nav {
 	right: 0;
 }
 
+#keyhole {
+	width: 17%;
+}
+
 .hidden-nav {
-	width: 84%;
+	width: 85.4%;
 	height: 100%;
 	background-color: #FFFFFF;
 	opacity: 0.75;
@@ -95,24 +99,105 @@ header {
 #page-title {
 	position: absolute;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	width: 100%;
 }
 
 #art {
-	color: red;
 	font-family: 'Kalam', cursive;
 }
 
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*HOME BUTTON*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-#keyhole {
-	width: 17%;
+.red {
+	color: red;
 }
 
+.orange {
+	color: orange;
+}
+
+.yellow {
+	color: yellow;
+}
+
+.green {
+	color: green;
+}
+
+.blue {
+	color: blue;
+}
+
+.indigo {
+	color: indigo;
+}
+
+.violet {
+	color: violet;
+}
+
+.white {
+	color: white;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*MODAL WINDOW*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.modal-background {
+  	padding-top: 50px;
+  	background-color: rgba(0, 0, 0, .5);
+  	position: fixed;
+  	top: 0;
+  	bottom: 0;
+  	right: 0;
+  	left: 0;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	z-index: 100;
+}
+
+  .modal-content {
+  	position: relative;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	padding: 40px 20px;
+  	color: #444;
+  	background-color: white;
+  	width: 40%;
+}
+
+#close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: flex;
+	justify-content: center;
+  	font-size: .85em;
+  	font-weight: 600;
+  	padding: 10px 15px;
+  	cursor: pointer;
+  	color: #fff;
+  	border: none;
+  	border-radius: 3px;
+  	outline: none;
+  	background-color: #40413E;
+}
+
+.modal-content h3 {
+	position: absolute;
+	top: 0;
+	margin: 15px 0 0 0;
+}
+
+.modal-content p {
+	position: absolute;
+	bottom: 0;
+	margin: 0 0 15px 0;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*FOOTER*/
@@ -237,7 +322,6 @@ footer p {
 h1, h2 {
 	position: relative;
 	text-align: center;
-	color: white;
 	z-index: 100;
 	text-transform: uppercase;
 }
@@ -247,9 +331,13 @@ h1 {
 	width: 340px;
 	margin: auto;
 	margin-top: 70px;
+	color: white;
 }
 
-
+h2 {
+	font-size: 40px;
+	color: #171814;
+}
 
 
 

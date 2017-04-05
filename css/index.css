@@ -239,7 +239,9 @@ ol {
 
 .lock-3,
 .key-points:nth-child(3) {
-	transition: all 0.3s ease-in-out 4s;
+	transition: transform 0.3s ease-in-out 4s, 
+				opacity 0.3s ease-in-out 4s;
+
 }
 
 .lock-4,
@@ -277,6 +279,11 @@ ol {
 
 .lock.rated {
 	transform:  translateY(100%);
+}
+
+.lock-3:hover {
+	content: url('../images/icons/lock-blue.svg');
+	opacity: 0.5;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -1,3 +1,17 @@
 header {
 	background-image: url(../images/background/suggestions.jpg);
 }
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+p {
+	display: inline-block;
+}
+
+section div {
+	margin: 20px 0;
+}

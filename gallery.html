@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="images/icons/favicon.png" type="image/x-icon" />
 
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Kalam" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cantarell:400,400i,700" rel="stylesheet">
@@ -25,9 +25,10 @@
 <!-- NAV BAR -->
         <nav>
             <div class="hidden-nav">
+                <a href="index.html">Home</a>
                 <a href="map_view.html">Map View</a>
                 <a href="list_view.html">List View</a>
-                <a href="gallery.html">Photo Gallery</a>
+                <a href="#">Photo Gallery</a>
                 <a href="success.html">Success Rate</a>
                 <a href="suggestions.html">Suggestions?</a>
             </div>
@@ -37,20 +38,44 @@
             
         </nav>
 
+
 <!-- HEADER -->
         <!-- <a href="#"><button id="keyhole"></button></a> -->
         <div id="page-title">
-            <h1>The <span id="art">Art</span> of Escape</h1>
+            <h1>The <span id="art" class="red">Art</span> of Escape</h1>
+            <h2>Photo Gallery</h2>
         </div>
 
 
         <header class="fullscreen" id="matt">
         </header>
 
+        <div class="modal-background">
+            <div class="modal-content">
+                <h3>Uh oh</h3>  
+                <p>Looks like you need to find the key first.</p>
+                <button id="close">X</button>
+            </div>
+        </div>
+
+
 <!-- SAMPLE SECTION -->
         <section class="fullscreen">
-            <img src="images/icons/key.svg" id="key">
+            <div class="future">
+                <img src="images/icons/key.svg" class="fake-key">
+                <p><--- It's dangerous to go alone, take this with you!</p>
+            </div>
+            <div class="future">
+                <h3>Future Plans</h3>
+                <ul>
+                    <li>Do something with the photos. Masonry layout? Carousel?</li>
+                </ul>
+            </div>
+            <div class="future">
+                <img src="images/rooms/palace_houdini.jpg" alt="">
+            </div>
         </section>
+
 
 <!-- FOOTER -->
         <footer id="jenni">
